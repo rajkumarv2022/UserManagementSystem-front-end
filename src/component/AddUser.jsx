@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import {v4 as uuid} from "uuid"
 
 export default class AddUser extends Component {
   
   state={
+    id:"",
     name:"",
     email:"",
   }
@@ -16,9 +18,9 @@ export default class AddUser extends Component {
     }
 
     console.log(this.state);
+    this.state.id=uuid();
     this.props.addContactHandler(this.state);
     this.setState({name : "" , email : ""});
-
   }
 
   render() {

@@ -15,6 +15,10 @@ export default function App() {
    
   };
 
+  const deleteContactHandler = (uuid) => {
+    setUser( user.filter((u) => u.id!=uuid ) );
+  };
+
   useEffect(()=> {
     console.log(user);
   } , [user] )
@@ -23,7 +27,7 @@ export default function App() {
     <div className='flex flex-col items-center justify-center gap-4 w-full h-screen'>
       <Header />
       <AddUser addContactHandler = {addContactHandler} />
-      <ContactList  user={user} />
+      <ContactList  user={user} deleteContactHandler = {deleteContactHandler} />
     </div>
   )
 }
