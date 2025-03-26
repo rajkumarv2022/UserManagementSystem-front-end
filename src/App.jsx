@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import Header from './component/Header'
 import AddUser from './component/AddUser';
+import ContactList from './component/ContactList';
 
 export default function App() {
 
@@ -19,9 +20,10 @@ export default function App() {
   } , [user] )
 
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center gap-4 w-full h-screen'>
       <Header />
       <AddUser addContactHandler = {addContactHandler} />
+      <ContactList  user={user} />
     </div>
   )
 }

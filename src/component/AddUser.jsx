@@ -24,7 +24,7 @@ export default class AddUser extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className='flex flex-col items-center justify-center gap-4'>
             <p><input placeholder='Enter name' value={this.state.name} onChange={(e)=> this.setState({name:e.target.value})} /></p>
             <p><input placeholder='Enter email' value={this.state.email} onChange={(e)=>{this.setState({email:e.target.value})}} /></p>
             <button type='submit'>Submit</button>
