@@ -16,8 +16,6 @@ export default class AddUser extends Component {
       alert("All the fields are mandotory");
       return;
     }
-
-    console.log(this.state);
     this.state.id=uuid();
     this.props.addContactHandler(this.state);
     this.setState({name : "" , email : ""});
