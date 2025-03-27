@@ -7,6 +7,7 @@ import Header from './component/Header'
 import AddUser from './component/AddUser';
 import ContactList from './component/ContactList';
 import SignupPage from './component/SignUpPage';
+import LoginPage from './component/LoginPage';
 
 export default function App() {
 
@@ -96,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center gap-4 w-full h-screen'>
+    <div className='flex flex-col items-center'>
       {/* <Header />
        <AddUser addContactHandler = {addContactHandler} />
        <ContactList  user={user} deleteContactHandler = {deleteContactHandler} />  */}
@@ -104,6 +105,8 @@ export default function App() {
         <Router>
           <Header />
           <Routes>
+            <Route path='/signup' Component={SignupPage} ></Route>
+            <Route path='/login' Component={LoginPage} ></Route>
             <Route path="/user/create" element = { <AddUser addContactHandler={addContactHandler} /> } ></Route>
             <Route path="/user/list" element = { <ContactList user={user} deleteContactHandler={deleteContactHandler} /> } ></Route>
           </Routes>
