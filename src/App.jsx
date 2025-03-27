@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './component/Header'
 import AddUser from './component/AddUser';
 import ContactList from './component/ContactList';
+import SignupPage from './component/SignUpPage';
 
 export default function App() {
 
@@ -25,9 +26,10 @@ export default function App() {
 
   return (
     <div className='flex flex-col items-center justify-center gap-4 w-full h-screen'>
-      <Header />
+      {/* <Header />
       <AddUser addContactHandler = {addContactHandler} />
-      <ContactList  user={user} deleteContactHandler = {deleteContactHandler} />
+      <ContactList  user={user} deleteContactHandler = {deleteContactHandler} /> */}
+      <SignupPage />
     </div>
   )
 }
