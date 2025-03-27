@@ -26,10 +26,9 @@ export default function App() {
 
   return (
     <div className='flex flex-col items-center justify-center gap-4 w-full h-screen'>
-      {/* <Header />
+      <Header />
       <AddUser addContactHandler = {addContactHandler} />
-      <ContactList  user={user} deleteContactHandler = {deleteContactHandler} /> */}
-      <SignupPage />
+      <ContactList  user={user} deleteContactHandler = {deleteContactHandler} />
     </div>
   )
 }
